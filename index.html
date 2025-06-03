@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <link rel="stylesheet" href="./message.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>Chat with Bunny</h3>
+        </div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="chat-input">
+            <textarea id="userInput" placeholder="Type a message...." rows="1"></textarea>
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.29.6.js"></script>
+    <script src="./message.js"></script>
+</body>
+</html>
