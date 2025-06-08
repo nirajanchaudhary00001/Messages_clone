@@ -15,12 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sendBtn.addEventListener("click", () => {
     const message = userInput.value.trim();
+    if (message === "Hi" || "hi" || "HI") {
+      appendMessage(message, "user"); // Sent message
+      setTimeout(() => {
+        appendMessage("Hi , How are you?", "bot"); // Received message
+      }, 1000);
+      userInput.value = "";
+      
+    }
+  });
+  sendBtn.addEventListener("click",()=>{
+    const message = userInput.value.trim();
     if (message) {
       appendMessage(message, "user"); // Sent message
-      userInput.value = "";
       setTimeout(() => {
-        appendMessage("Hello, Welcome to Bunny Chatbox", "bot"); // Received message
+        appendMessage("Welcome to my chat box ! , How can I help you ?", "bot"); // Received message
       }, 1000);
+      userInput.value = "";
     }
   });
 
